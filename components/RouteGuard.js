@@ -19,7 +19,8 @@ export default function RouteGuard(props) {
   
 
     useEffect(() => {
-        updateAtoms();
+        if (isAuthenticated()){
+        updateAtoms();}
         // on initial load - run auth check 
         authCheck(router.pathname);
 
