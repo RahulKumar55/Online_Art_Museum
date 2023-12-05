@@ -15,7 +15,7 @@ export default function Favourites() {
         <Row className="gy-4">
             {favouritesList.length > 0  
             ?<>{favouritesList.map((a) => (
-                 <Col lg={3} key={a}><ArtworkCard objectID={a} /></Col>)
+                 <Col lg={3} key={a}><ArtworkCard objectID={a} key={a}/></Col>)
                 )}
             </> 
             : <Card><h4>Nothing Here</h4>Try searching for something else.</Card>}    
